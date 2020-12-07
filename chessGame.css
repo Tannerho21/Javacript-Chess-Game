@@ -1,0 +1,19 @@
+.square{
+  width:100px;
+  height:100px;
+  boarder:1px solid black;
+  display:inline-block;
+}
+
+.square-grey{
+  background-color:grey;
+  width:100px;
+  height:100px;
+  boarder:1px solid black;
+  display:inline-block;
+}
+
+  #board{
+    width:100%;
+    text-align:center;
+  }
