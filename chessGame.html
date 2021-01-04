@@ -1,79 +1,101 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" type="text/css" href="chessGame.css"/>
+	<head>
+		<script>alert("This program is developed by Tanner Hollinger using HTML,CSS and javaScript only. If you want to replay, refresh the page");</script>
+		<link rel="stylesheet" type="text/css" href="chessGame.css"/>
+		<script src="chessGame.js"></script>
+	</head>
+	<body>
+		<h1>CHESS MASTER</h1>
+		<table align="center" cellspacing="0">
+			<tr align="center">
+				<td class="wide" align="center"><strong>WHITES</strong></td>
 
-  <div id="board">
-    <div row="8" column="1" class="square-grey" player="black" piece="rook"></div>
-    <div row="8" column="2" class="square" player="black" piece="knight"></div>
-    <div row="8" column="3" class="square-grey" player="black" piece="bishop"></div>
-    <div row="8" column="4" class="square" player="black" piece="king"></div>
-    <div row="8" column="5" class="square-grey" player="black" piece="queen"></div>
-    <div row="8" column="6" class="square" player="black" piece="bishop"></div>
-    <div row="8" column="7" class="square-grey" player="black" piece="knight"></div>
-    <div row="8" column="8" class="square" player="black" piece="rook"></div>
-    <br />
-    <div row="7" column="1" class="square" player="black" piece="pawn"></div>
-    <div row="7" column="2" class="square-grey" player="black" piece="pawn"></div>
-    <div row="7" column="3" class="square" player="black" piece="pawn"></div>
-    <div row="7" column="4" class="square-grey" player="black" piece="pawn"></div>
-    <div row="7" column="5" class="square" player="black" piece="pawn"></div>
-    <div row="7" column="6" class="square-grey" player="black" piece="pawn"></div>
-    <div row="7" column="7" class="square" player="black" piece="pawn"></div>
-    <div row="7" column="8" class="square-grey" player="black" piece="pawn"></div>
-    <br />
-    <div row="6" column="1" class="square-grey" player="" piece=""></div>
-    <div row="6" column="2" class="square" player="" piece=""></div>
-    <div row="6" column="3" class="square-grey" player="" piece=""></div>
-    <div row="6" column="4" class="square" player="" piece=""></div>
-    <div row="6" column="5" class="square-grey" player="" piece=""></div>
-    <div row="6" column="6" class="square" player="" piece=""></div>
-    <div row="6" column="7" class="square-grey" player="" piece=""></div>
-    <div row="6" column="8" class="square" player="" piece=""></div>
-    <br />
-    <div row="5" column="1" class="square" player="" piece=""></div>
-    <div row="5" column="2" class="square-grey" player="" piece=""></div>
-    <div row="5" column="3" class="square" player="" piece=""></div>
-    <div row="5" column="4" class="square-grey" player="" piece=""></div>
-    <div row="5" column="5" class="square" player="" piece=""></div>
-    <div row="5" column="6" class="square-grey" player="" piece=""></div>
-    <div row="5" column="7" class="square" player="" piece=""></div>
-    <div row="5" column="8" class="square-grey" player="" piece=""></div>
-    <br />
-    <div row="4" column="1" class="square-grey" player="" piece=""></div>
-    <div row="4" column="2" class="square" player="" piece=""></div>
-    <div row="4" column="3" class="square-grey" player="" piece=""></div>
-    <div row="4" column="4" class="square" player="" piece=""></div>
-    <div row="4" column="5" class="square-grey" player="" piece=""></div>
-    <div row="4" column="6" class="square" player="" piece=""></div>
-    <div row="4" column="7" class="square-grey" player="" piece=""></div>
-    <div row="4" column="8" class="square" player="" piece=""></div>
-    <br />
-    <div row="3" column="1" class="square" player="" piece=""></div>
-    <div row="3" column="2" class="square-grey" player="" piece=""></div>
-    <div row="3" column="3" class="square" player="" piece=""></div>
-    <div row="3" column="4" class="square-grey" player="" piece=""></div>
-    <div row="3" column="5" class="square" player="" piece=""></div>
-    <div row="3" column="6" class="square-grey" player="" piece=""></div>
-    <div row="3" column="7" class="square" player="" piece=""></div>
-    <div row="3" column="8" class="square-grey" player="" piece=""></div>
-    <br />
-    <div row="2" column="1" class="square-grey" player="white" piece="pawn"></div>
-    <div row="2" column="2" class="square" player="white" piece="pawn"></div>
-    <div row="2" column="3" class="square-grey" player="white" piece="pawn"></div>
-    <div row="2" column="4" class="square" player="white" piece="pawn"></div>
-    <div row="2" column="5" class="square-grey" player="white" piece="pawn"></div>
-    <div row="2" column="6" class="square" player="white" piece="pawn"></div>
-    <div row="2" column="7" class="square-grey" player="white" piece="pawn"></div>
-    <div row="2" column="8" class="square" player="white" piece="pawn"></div>
-    <br />
-    <div row="1" column="1" class="square" player="white" piece="rook"></div>
-    <div row="1" column="2" class="square-grey" player="white" piece="knight"></div>
-    <div row="1" column="3" class="square" player="white" piece="bishop"></div>
-    <div row="1" column="4" class="square-grey" player="white" piece="king"></div>
-    <div row="1" column="5" class="square" player="white" piece="queen"></div>
-    <div row="1" column="6" class="square-grey" player="white" piece="bishop"></div>
-    <div row="1" column="7" class="square" player="white" piece="knight"></div>
-    <div row="1" column="8" class="square-grey" player="white" piece="rook"></div>
-    <br />
-  </div>
+				<td id="11" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/rook.png"   width="50px" id="whiterook1"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="12" class="black dropzone"       ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/knight.png" width="50px" id="whiteknight1" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="13" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/bishop.png" width="50px" id="whitebishop1" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="14" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/queen.png"  width="50px" id="whitequeen"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="15" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/king.png"   width="50px" id="whiteking" 	  draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="16" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/bishop.png" width="50px" id="whitebishop2" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="17" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/knight.png" width="50px" id="whiteknight2" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="18" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/rook.png"   width="50px" id="whiterook2"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+
+				<td class="wide" align="center"><strong>BLACKS</strong></td>
+			</tr>
+			<tr align="center">
+				<td valign="top" class="wide" id="white" rowspan="7" ondrop="drop(event)"></td>
+
+				<td id="21" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn1" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="22" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn2" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="23" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn3" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="24" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn4" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="25" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn5" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="26" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn6" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="27" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn7" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="28" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="whiteset" src="https://img.icons8.com/ios/2x/pawn.png" width="50px" id="whitepawn8" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+
+				<td valign="top" class="wide" id="black" rowspan="7"></td>
+			</tr>
+			<tr align="center">
+				<td id="31" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="32" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="33" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="34" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="35" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="36" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="37" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="38" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr align="center">
+				<td id="41" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="42" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="43" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="44" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="45" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="46" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="47" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="48" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr align="center">
+				<td id="51" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="52" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="53" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="54" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="55" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="56" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="57" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="58" class="black dropzone"  	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr align="center">
+				<td id="61" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="62" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="63" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="64" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="65" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="66" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="67" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+				<td id="68" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+			</tr>
+			<tr align="center">
+				<td id="71" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn1"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="72" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn2"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="73" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn3"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="74" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn4"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="75" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn5"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="76" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn6"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="77" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn7"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="78" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/pawn-filled.png"   width="50px" id="blackpawn8"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+			</tr>
+			<tr align="center">
+				<td id="81" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/rook-filled.png"   width="50px" id="blackrook1"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="82" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/knight-filled.png" width="50px" id="blackknight1" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="83" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/bishop-filled.png" width="50px" id="blackbishop1" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="84" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/queen-filled.png"  width="50px" id="blackqueen"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="85" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/king-filled.png"   width="50px" id="blackking"    draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="86" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/bishop-filled.png" width="50px" id="blackbishop2" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="87" class="black dropzone" 	   ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/knight-filled.png" width="50px" id="blackknight2" draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+				<td id="88" class="dropzone" ondrop="drop(event)" ondragover="allowDrop(event)"><img class="blackset" src="https://img.icons8.com/ios/2x/rook-filled.png"   width="50px" id="blackrook2"   draggable="true" ondragstart="drag(event)" ondragend="removePath()"></td>
+			</tr>
+		</table>
+	</body>
 </html>

@@ -1,19 +1,44 @@
-.square{
-  width:100px;
-  height:100px;
-  boarder:1px solid black;
-  display:inline-block;
+body{
+	background-image:url("http://www.ubuntu-ast.org/largeimages/29/297045_plain-white-wallpaper.jpg");
+}
+h1{
+	text-align:center;
+}
+table{
+	border:0.5px solid gray;
+}
+td{
+	width:80px;
+	height:80px;
+	border:0.5px solid gray;
+	padding:0;
+}
+.black{
+	background-color:#8e8a55;
+}
+#one{
+	border:1px solid black;
+	width:100px;
+	height:500px;
+	float:left;
+}
+#two{
+	border:1px solid black;
+	width:100px;
+	height:500px;
+	float:right;
+}
+.wide{
+	width:27%;
 }
 
-.square-grey{
-  background-color:grey;
-  width:100px;
-  height:100px;
-  boarder:1px solid black;
-  display:inline-block;
+img{
+	padding: 10px;
+	margin: 0;
 }
-
-  #board{
-    width:100%;
-    text-align:center;
-  }
+.path{
+	background: green;
+}
+.enemy{
+	background: red;
+}
